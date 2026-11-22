@@ -1,9 +1,5 @@
 SELECT
-  students.name,
-  COALESCE(classes.class_name, 'Unassigned')
-FROM
-  students
-LEFT JOIN
-  classes
-ON
-  students.class_id = classes.class_id;
+    students.name,
+    coalesce(classes.class_name,'Unassigned')
+FROM students
+LEFT JOIN classes on students.class_id = classes.class_id;
